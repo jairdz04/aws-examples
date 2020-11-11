@@ -5,5 +5,5 @@ Resources:
       ApiId: !Ref AuthorizerApi
       IntegrationMethod: GET
       IntegrationType: HTTP_PROXY
-      IntegrationUri: https://www.endava.com/en
+      IntegrationUri: https://www.facebook.com
       PayloadFormatVersion: "1.0"
