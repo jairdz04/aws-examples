@@ -1,0 +1,9 @@
+Resources:
+  AuthorizerApiIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref AuthorizerApi
+      IntegrationMethod: GET
+      IntegrationType: HTTP_PROXY
+      IntegrationUri: https://www.endava.com/en
+      PayloadFormatVersion: "1.0"

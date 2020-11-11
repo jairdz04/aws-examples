@@ -1,0 +1,18 @@
+service: cognito-authorizer
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'development'}
+  region: ${opt:region, 'us-east-1'}
+
+resources:
+  ## Cognito resources
+  - ${file(cognito/pool.yml)}
+  - ${file(cognito/client.yml)}
+  ## Api gateway resources
+  - ${file(api-gateway/http-api.yml)}
+  - ${file(api-gateway/authorizer.yml)}
+  - ${file(api-gateway/http-api-integration.yml)}
+  - ${file(api-gateway/http-api-route.yml)}
+  - ${file(api-gateway/http-api-stage.yml)}

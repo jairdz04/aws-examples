@@ -1,0 +1,9 @@
+Resources:
+  HttpApiRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref AuthorizerApi
+      AuthorizationType: JWT
+      AuthorizerId: !Ref Authorizer
+      RouteKey: GET /
+      Target: !Sub "integrations/${AuthorizerApiIntegration}"

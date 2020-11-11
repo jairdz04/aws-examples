@@ -1,0 +1,9 @@
+Resources:
+  AuthorizerUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      AutoVerifiedAttributes:
+        - email
+      UsernameAttributes:
+        - email
+      UserPoolName: cognito-api-gateway

@@ -1,0 +1,7 @@
+Resources:
+  HttpApiStage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref AuthorizerApi
+      AutoDeploy: true
+      StageName: api-gateway-authorizer-${opt:stage, 'development'}

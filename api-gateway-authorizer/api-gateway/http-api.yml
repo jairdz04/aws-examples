@@ -1,0 +1,6 @@
+Resources:
+  AuthorizerApi:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: cognito-api-gateway
+      ProtocolType: HTTP
